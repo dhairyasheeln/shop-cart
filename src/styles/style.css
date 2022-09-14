@@ -1,0 +1,288 @@
+/*CSS Resets*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+/*Colors*/
+:root{
+    --grey:#ECECEC;
+    --yellow:#EABF00;
+    --light-grey:#C8C8C8;
+    --black:#000000;
+    --white:#ffffff;
+}
+
+/*Generalized*/
+
+.container{
+    max-width:1600px;
+    margin:0 auto;
+    padding:32px 32px;
+}
+
+/*Active class*/
+
+.active{
+    background-color: var(--yellow) !important;
+}
+
+/*Text Center*/
+
+.center{
+    text-align: center;
+}
+
+/*Flex*/
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.col-10{
+    flex:0 1 10%;
+}
+
+.col-15{
+    flex:0 1 15%;
+}
+
+.col-20{
+    flex:0 1 20;
+}
+
+.width-22{
+    width: 22%;
+}
+
+.col-65{
+    flex:0 1 65%;
+}
+
+.col-75{
+    flex:0 1 75%;
+}
+
+
+/*Aside*/
+
+.sizeLabel{
+    font-size: 20px;
+}
+
+.size{
+    box-sizing: border-box;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height:40px;
+    border-radius: 50%;
+    margin-left: 10px;
+    background-color: var(--grey);
+    margin:5px;
+    text-align: center; 
+}
+
+/*Main*/
+
+/*Product*/
+
+.noOfProducts{
+    margin-bottom: 30px;
+}
+
+select{
+    padding:10px 20px;
+    border-radius: 4px;
+    background-color: var(--white);
+}
+
+.product-item{
+    padding: 20px;
+}
+.product-item-img{
+    width: 100%;
+
+}
+.product-item-title{
+    margin: 10px 0;
+}
+
+.product-item-price{
+    font-size: 20px;
+}
+.btn-cart{
+    background-color: var(--black);
+    border: none;
+    color: var(--white);
+    padding: 10px 20px;
+    margin: 10px 0;
+}
+
+/*Cart*/
+body{
+    position: relative;
+}
+.cart{
+    position: absolute;
+    right:0px;
+    top:0px;
+    background-color: var(--black);
+    color: var(--white);
+    width: 500px;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.cart-btn{
+    position: absolute;
+    right:0px;
+    top:0px;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+.cart-heading{
+    margin-bottom: 20px;
+}
+
+.cart-icon{
+    text-align: center;
+}
+.item-count{
+    padding: 10px;
+    background-color: var(--yellow);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.cart-label{
+    margin-left: 10px;
+    font-size:20px;
+}
+
+.cart-item{
+    padding: 20px;
+    background-color: var(--light-grey);
+    color: var(--black);
+    border-radius: 4px;
+    margin-bottom: 2px;
+    position: relative;
+}
+
+.cart-item-img{
+    border: 1px solid var(--black);
+    border-radius: 4px;
+}
+
+.cart-cross{
+    position: absolute;
+    top:10px;
+    right:10px;
+}
+
+.cart-checkout{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.sub-total{
+    margin: 10px 0;
+}
+
+.sub-total-label,.sub-total-amt{
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.cart-item-style{
+    margin: 10px 0;
+}
+
+.checkout-btn{
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: none;
+}
+
+.quantity-btn{
+    background-color: inherit;
+    font-size: 20px;
+    border: 1px solid var(--black);
+    width: 30px;
+    height: 30px;
+    border-radius:4px;
+    margin:5px;
+}
